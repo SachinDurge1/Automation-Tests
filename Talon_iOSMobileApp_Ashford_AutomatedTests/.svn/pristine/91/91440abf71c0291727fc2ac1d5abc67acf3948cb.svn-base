@@ -1,0 +1,18 @@
+package com.iosmobileapp.ashford.pages;
+
+import org.openqa.selenium.By;
+
+import com.iosmobileapp.ashford.utilities.AshfordLocators;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+
+public class HelpCenterPage {
+
+	// Method to get the "Help Center" Header from the Help center page..
+	public static boolean isHelpCenterHeader_Exists() throws InterruptedException
+	{
+		By locator_HelpCenter = AshfordLocators.HELPCENTER_HELPCENTER_ICON;
+		boolean elementfound = CommonMethods.isElementFound(locator_HelpCenter);
+		return elementfound;
+	}
+
+}

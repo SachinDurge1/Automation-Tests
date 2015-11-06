@@ -1,0 +1,17 @@
+package com.iosmobileapp.ashford.pages;
+
+import org.openqa.selenium.By;
+
+import com.iosmobileapp.ashford.utilities.AshfordLocators;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+
+public class AshfordProfilePage {
+
+	// Method to get the "Ashford Stdent Profile" Header from the Ashford Profile page..
+	public static boolean isAshfordStdentProfileHdr_Exists() throws InterruptedException
+	{
+		By locator_AshfordProfile = AshfordLocators.ASHFORDPROFILE_STUDENTPROFILE_HEADER;
+		boolean elementfound = CommonMethods.isElementFound(locator_AshfordProfile);
+		return elementfound;
+	}
+}

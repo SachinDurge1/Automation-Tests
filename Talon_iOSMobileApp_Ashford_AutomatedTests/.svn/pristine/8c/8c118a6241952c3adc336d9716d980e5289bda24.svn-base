@@ -1,0 +1,107 @@
+package com.iosmobileapp.ashford.tests;
+
+import java.io.IOException;
+import java.util.Properties;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import com.iosmobileapp.ashford.pages.CalendarPage;
+import com.iosmobileapp.ashford.pages.HomePage;
+import com.iosmobileapp.ashford.pages.LoginPage;
+import com.iosmobileapp.ashford.pages.ThreeLineMenuBarPage;
+import com.iosmobileapp.ashford.utilities.Appium;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+import com.iosmobileapp.ashford.utilities.GetResourceFileLocations;
+
+
+public class AT003_ValidateHomePageHeader {
+
+	// Set up to set the Configurations of the device..
+	@BeforeTest
+	public void setUp() throws Exception 
+	{
+
+		// Read the test data as the key and value pair from the text file..
+		Properties prop = CommonMethods.readFile(GetResourceFileLocations.DEVICESETUP);
+
+		// Set all the capabilities to the device..
+		Appium.setUp(prop);
+
+		//Handle the Alerts..
+		CommonMethods.clickAlertPopUp();		
+	}
+
+	// Test Method to verify the Functionality of the home page..
+	@Test
+	public void test() throws IOException, InterruptedException
+	{
+
+		// Read the test data as key and values from the text file..
+		Properties prop = CommonMethods.readFile(GetResourceFileLocations.CREDENTIALS);
+
+		//Enter the UserName into the "UserName" field in the login page..
+		LoginPage.enterUserName(prop.getProperty("UserName"));
+
+		// Enter the Password into the "Password" field in the login page..
+		LoginPage.enterPassword(prop.getProperty("Password"));
+
+		// Click on the "Sign In" button in the login Page..
+		LoginPage.clickSignInBtn();
+		
+		// Get the Existence of the "Home" Tab in the home page..
+		boolean isHometab_exists = HomePage.isHomeHeader_Exists();
+		// Assert to validate the Home Tab exists successfully.
+		Assert.assertTrue(isHometab_exists,"Expected Home tab in home page; Actually not found");
+
+		//Click on the 'Three Line icon Bar' in the home page..
+		CommonMethods.threeLineBar();
+		
+		// Get the Existence of the "Home" link in the three line menu bar page..
+		boolean isHomeLink_exists = ThreeLineMenuBarPage.isHomeLink_Exists();
+		// Assert to validate the Home Link exists successfully.
+		Assert.assertTrue(isHomeLink_exists,"Expected Home link in Three Line Icon Bar page; Actually not found");
+		
+		//Click on the 'Home' link in the three line menu bar page..
+		ThreeLineMenuBarPage.clickHomeLink();
+		
+		// Get the Existence of the "Home" tab in the home page..
+		isHometab_exists = HomePage.isHomeHeader_Exists();
+		// Assert to validate the Home Tab exists successfully.
+		Assert.assertTrue(isHometab_exists,"Expected Home tab in home page; Actually not found");
+		
+		//Click on the 'calender icon' in the home page..
+		HomePage.clickCalenderIcon();
+		
+		// Get the Existence of the "Calendar Today" Header in the calender page..
+		boolean isTodayHeader_exists = CalendarPage.isCalendarHeader_Exists();
+		// Assert to validate the Today header exists successfully.
+		Assert.assertTrue(isTodayHeader_exists,"Expected Calendar Today header in Three Line Icon Bar page; Actually not found");
+		
+		//Click on the 'Three Line icon Bar' in Home page..
+		CommonMethods.threeLineBar();
+		
+		// Get the Existence of the "Calender" Link in the Three Line Icon Bar page..
+		boolean isCalenderLink_exists = ThreeLineMenuBarPage.isCalendarLink_Exists();
+		// Assert to validate the Home Link exists successfully.
+		Assert.assertTrue(isCalenderLink_exists,"Expected Calender link in Three Line Icon Bar page; Actually not found");
+		
+		//Click on the 'Home Tab' in Home page..
+		HomePage.clickHomeTab();
+		
+
+
+	}
+
+	// Tear Down to close the driver instance..
+	@AfterTest
+	public void tearDown() throws Exception
+	{
+		//Click on SignOut Link...
+		ThreeLineMenuBarPage.clickSignOutLink();
+		System.out.println("Closing the application...");
+		Appium.driver.quit();
+
+	}
+
+}

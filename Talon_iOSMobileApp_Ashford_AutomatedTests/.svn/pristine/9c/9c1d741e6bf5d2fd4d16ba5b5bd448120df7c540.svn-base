@@ -1,0 +1,8 @@
+ApplicationPath = /Users/MacBox/Desktop/TalonSFTPFiles/20151021/Automated Regression Testing/Ashford-iPhone 2015-10-20 Development/Ashford-iPhone.ipa
+PlatformName = iOS
+PlatformVersion = 9.0.1 (13A404)
+DeviceName = VJIL iPhone6
+UdId = 652ed4defd899eab58ac595e41e09b9157195c0f
+BundleId = com.bridgepointeducation.ashfordmobile
+AppiumHub = http://127.0.0.1:4723/wd/hub
+

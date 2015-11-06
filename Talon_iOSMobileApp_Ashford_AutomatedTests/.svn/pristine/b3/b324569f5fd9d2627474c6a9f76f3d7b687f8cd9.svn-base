@@ -1,0 +1,43 @@
+package com.iosmobileapp.ashford.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import com.iosmobileapp.ashford.utilities.Appium;
+import com.iosmobileapp.ashford.utilities.AshfordLocators;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+
+public class ThreeLineIconMenuPage {
+
+	// Method to Click on the "Sign Out" Link in Login Page..
+	public static void  clickSignOutLink()
+	{
+		By locator_SignOutLink = AshfordLocators.HOMEPAGE_SIGNOUT_LINK;
+		boolean elementFound = CommonMethods.isElementFound(locator_SignOutLink);
+
+		if (elementFound)
+		{
+
+			WebElement signOutLink = Appium.driver.findElement(locator_SignOutLink);
+			signOutLink.click();
+
+			By locator_SignOutPopUp = AshfordLocators.HOMEPAGE_SIGNOUT_LINK;
+			elementFound = CommonMethods.isElementFound(locator_SignOutPopUp);
+
+			if (elementFound)
+			{
+
+				By locator_YES = AshfordLocators.HOMEPAGE_YES_POPUP;
+				elementFound = CommonMethods.isElementFound(locator_YES);
+				if(elementFound)
+				{
+					WebElement yesAlert = Appium.driver.findElement(locator_YES);
+					yesAlert.click();
+				}
+
+
+			}
+		}
+	}
+
+}

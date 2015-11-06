@@ -1,0 +1,76 @@
+package com.iosmobileapp.ashford.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import com.iosmobileapp.ashford.utilities.Appium;
+import com.iosmobileapp.ashford.utilities.AshfordLocators;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+
+public class HomePage {
+
+	// Method to click on the "Home" Tab in Home Page..
+	public static void  clickHomeTab()
+	{
+		By locator_HomeTab = AshfordLocators.THREELINEBAR_HOME_LINK;
+		boolean elementFound = CommonMethods.isElementFound(locator_HomeTab);
+
+		if (elementFound)
+		{
+			WebElement homeTabBtn = Appium.driver.findElement(locator_HomeTab);
+			homeTabBtn.click();
+
+		}
+	}
+
+	// Method to click on the "Calendar" icon in Home Page..
+	public static void  clickCalendarIcon()
+	{
+		By locator_Calendaricon = AshfordLocators.HOMEPAGE_CALENDER_ICON;
+		boolean elementFound = CommonMethods.isElementFound(locator_Calendaricon);
+
+		if (elementFound)
+		{
+			WebElement calendarIcon = Appium.driver.findElement(locator_Calendaricon);
+			calendarIcon.click();
+
+		}
+	}
+
+	// Method to click on the "Writing Center" icon in Home Page..
+	public static void clickWritingCenterIcon()
+	{
+		By locator_WritingCenter = AshfordLocators.HOMEPAGE_WRITINGCENTER;
+		boolean elementFound = CommonMethods.isElementFound(locator_WritingCenter);
+
+		if (elementFound)
+		{
+			WebElement writingcenterotpn = Appium.driver.findElement(locator_WritingCenter);
+			writingcenterotpn.click();
+
+		}
+	}
+
+	// Method to click on the "Ashford Library" icon in Home Page..
+	public static void clickAshfordLibraryIcon()
+	{
+		By locator_AshfordLibrary = AshfordLocators.HOMEPAGE_ASHFORDLIBRARY;
+		boolean elementFound = CommonMethods.isElementFound(locator_AshfordLibrary);
+
+		if (elementFound)
+		{
+			WebElement ashordLibrary = Appium.driver.findElement(locator_AshfordLibrary);
+			ashordLibrary.click();
+
+		}
+	}
+
+	// Method to get the header for the successfully sign page..
+	public static boolean isHomeHeader_Exists() throws InterruptedException
+	{
+		By locator_HomeHeader = AshfordLocators.HOMEPAGE_HOME_ICON;
+		boolean elementfound = CommonMethods.isElementFound(locator_HomeHeader);
+		return elementfound;
+	}
+
+}

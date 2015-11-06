@@ -1,0 +1,58 @@
+package com.iosmobileapp.ashford.utilities;
+
+import org.openqa.selenium.By;
+
+// Class for Driver methods in the test scripts for Re-usability..
+public final  class AshfordLocators
+{	
+	    //Constants assigned with the locator values for the 'Login' page elements..	
+	    public static final By LOGINPAGE_EMAILID = By.name("Username");
+	    public static final By LOGINPAGE_PASSWORD = By.name("Password");
+		public static final By LOGINPAGE_SIGNIN_BTN = By.name("Go");
+		public static final By LOGINPAGE_FORGOTPASSWORD_LINK = By.name("Forgot Password Button");
+		public static final By LOGINPAGE_HELPCENTER_ICON = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIAButton[1]");
+		
+		//Constants assigned with the locator values for the 'Help Center' page elements..
+		public static final By HELPCENTER_BACK_ICON = By.name("Back");
+		public static final By HELPCENTER_HELPCENTER_ICON = By.name("Help Center");
+		public static final By HELPCENTER_TALON_ICON = By.name("ico talon");
+		public static final By HELPCENTER_SUPPORTNUMBER_BTN = By.name("Support Number: (800) 285-9796");
+		public static final By HELPCENTER_FAQ_BTN = By.name("Frequently Asked Questions");
+		public static final By HELPCENTER_VIDEOTUTORIAL_BTN = By.name("Video Tutorial");
+		public static final By HELPCENTER_PRIVACYPOLICY_BTN = By.name("Privacy Policy");
+		
+		//Constants assigned with the locator values for the 'Forgot Password' page elements..
+		public static final By FORGOTPASSWORD_RESETPASSWORD_ICON = By.name("Reset Password");
+		
+		//Constants assigned with the locator values for the 'Home' page elements..
+		public static final By HOMEPAGE_HOME_ICON = By.name("Home");
+		
+		
+		//public static final By HOMEPAGE_THREELINEBAR = By.name("ico menu");
+		public static final By HOMEPAGE_THREELINEBAR_ICON = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIANavigationBar[1]/UIAButton[1]");
+		public static final By HOMEPAGE_CALENDER_ICON = By.name("ico calendar");
+		public static final By HOMEPAGE_WRITINGCENTER = By.name("writingcenter");
+		public static final By HOMEPAGE_ASHFORDLIBRARY = By.name("library");
+		public static final By HOMEPAGE_FACBOOK_ICON = By.name("Facebook");
+		public static final By HOMEPAGE_TWITTER_ICON = By.name("Twitter");
+		public static final By HOMEPAGE_YOUTUBE_ICON = By.name("Youtube");
+		public static final By HOMEPAGE_SIGNOUT_LINK = By.name("Sign Out");
+		public static final By HOMEPAGE_YES_POPUP = By.name("YES");
+		
+		//Constants assigned with the locator values for the 'Facebook' page elements..
+		public static final By FACEBOOK_BACKTOASHFORD = By.xpath("//UIAApplication[1]/UIAWindow[4]/UIAStatusBar[1]/UIAButton[1]");
+		
+		//Constants assigned with the locator values for the 'Calender' page elements..
+		public static final By CALENDER_TODAY = By.name("Today");
+		
+		//Constants assigned with the locator values for the 'ThreeLineIconBar' page elements..
+		public static final By THREELINEBAR_ASHFORDPROFILE = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[1]");
+		public static final By THREELINEBAR_HOME_TAB = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[2]");
+		public static final By THREELINEBAR_CALENDER_TAB = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[3]");
+		public static final By THREELINEBAR_NEWSALERTS_TAB = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[10]");
+		public static final By THREELINEBAR_CONTACTS_TAB = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[11]");		
+		public static final By THREELINEBAR_PASTCOURSES_TAB = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[12]");
+		public static final By THREELINEBAR_FUTURECOURSES_TAB = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[13]");
+		public static final By THREELINEBAR_HELPCENTER_TAB = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[14]");
+		public static final By THREELINEBAR_SIGNOUT = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[15]");	
+}

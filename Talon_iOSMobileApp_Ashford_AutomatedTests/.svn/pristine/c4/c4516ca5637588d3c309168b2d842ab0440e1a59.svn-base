@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="75000" started-at="2015-10-27T14:16:03Z" finished-at="2015-10-27T14:17:18Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="75000" started-at="2015-10-27T14:16:03Z" finished-at="2015-10-27T14:17:18Z">
+      <class name="com.iosmobileapp.ashford.tests.AT001_ValidateUserLogin">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.iosmobileapp.ashford.tests.AT001_ValidateUserLogin@735c3f7b]" name="setUp" is-config="true" duration-ms="13505" started-at="2015-10-27T19:46:03Z" finished-at="2015-10-27T19:46:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.iosmobileapp.ashford.tests.AT001_ValidateUserLogin@735c3f7b]" name="test" duration-ms="44752" started-at="2015-10-27T19:46:16Z" finished-at="2015-10-27T19:47:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.iosmobileapp.ashford.tests.AT001_ValidateUserLogin@735c3f7b]" name="tearDown" is-config="true" duration-ms="16728" started-at="2015-10-27T19:47:01Z" finished-at="2015-10-27T19:47:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.iosmobileapp.ashford.tests.AT001_ValidateUserLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

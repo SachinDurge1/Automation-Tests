@@ -1,0 +1,151 @@
+package com.iosmobileapp.ashford.utilities;
+
+import io.appium.java_client.AppiumDriver;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+// Class for commonly used methods in the test scripts for Re-usability..
+public class CommonMethods
+{
+	// Create a string variable to capture the exception message..
+	public static String exceptionMsg = "";		
+
+
+	// Method to check whether the element is found..
+	public static boolean isElementFound(By locator)
+	{
+		try
+		{
+			WebDriverWait wait = new WebDriverWait(Appium.driver, 50);
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			return true;
+		}
+		catch (WebDriverException ex)
+		{
+			exceptionMsg = locator + " - element not found | element not visible!! " + ex.getMessage();                
+			return false;
+		}
+	}
+	
+	// Method to accept the Alert Pop up..
+	public static void clickAlertPopUp()
+	{	   
+			WebDriverWait wait = new WebDriverWait(Appium.driver, 30);
+			 
+		     // Wait for Alert to be present
+		     Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
+		     myAlert.accept();
+		
+		
+	}
+	
+	// Method to handle multiple windows and to switch to the latest window..
+    public static void switchWindow() throws InterruptedException
+    {
+
+    	//String defWindowID = Appium.driver.getWindowHandle();
+        //String lastWindowId = null;
+    	
+    	Appium.driver.findElement(By.name("writingcenter")).click();
+    	/*
+        Set <String> windowsIds = Appium.driver.getWindowHandles(); // get the all windows id
+        Iterator<String> it = windowsIds.iterator();
+        while(it.hasNext())
+        {
+	     String newwin = it.next().toString();
+	    if(!defWindowID.equals(newwin))
+	      {
+		   Appium.driver.switchTo().window(newwin);
+		 
+	      }
+        }
+        */
+    	Thread.sleep(20000);
+    	Set<String> contextNames = Appium.driver.getContextHandles();
+        for (String contextName : contextNames) {
+          System.out.println(contextName);
+          if (contextName.contains("WEBVIEW")){
+        	  Appium.driver.context(contextName);
+          }
+        }
+    }
+   /*     
+        for(String handle : windowsIds)
+        {
+            lastWindowId = handle;
+        }
+
+        Appium.driver.switchTo().window(lastWindowId); //child handle
+    }
+*/
+
+	// Method to read the test data as key and values from the text file..
+	public static Properties readFile(String path) throws IOException
+	{            
+		Properties prop = new Properties();
+		FileInputStream inputFile = null;
+		
+		// Read the file for the path specified..
+		try {			
+			inputFile = new FileInputStream(path);
+		} catch (FileNotFoundException e) {
+			
+			System.out.println("Exception thrown for filepath: " + path + " - " + e.getMessage());
+			System.out.println("Stack Trace follows: ");
+			e.printStackTrace();
+		}
+		
+		// Get the properties from the file path specified..
+		try {
+			prop.load(inputFile);
+		} catch (Exception e) {
+			
+			System.out.println("Exception thrown for filepath: " + path + " - " + e.getMessage());
+			System.out.println("Stack Trace follows: ");
+			e.printStackTrace();
+		}
+
+		return prop;
+	}	
+	
+	
+	  // Method to Click on the "BACK" button ..
+		public static void  clickBackBtn()
+		{
+			By locator_BackBtn = AshfordLocators.HELPCENTER_BACK_ICON;
+			boolean elementFound = CommonMethods.isElementFound(locator_BackBtn);
+			
+			if (elementFound)
+			{
+				WebElement backBtn = Appium.driver.findElement(locator_BackBtn);
+				backBtn.click();
+			}
+		}
+		
+		// Method to click on the "ThreeLineBar" field in Home Page..
+		public static void  threeLineBar()
+		{
+			By locator_threeLineBarBtn = AshfordLocators.HOMEPAGE_THREELINEBAR_ICON;
+			boolean elementFound = CommonMethods.isElementFound(locator_threeLineBarBtn);
+
+			if (elementFound)
+			{
+				WebElement threelineBtn = Appium.driver.findElement(locator_threeLineBarBtn);
+				threelineBtn.click();
+				
+			}
+		}
+
+}

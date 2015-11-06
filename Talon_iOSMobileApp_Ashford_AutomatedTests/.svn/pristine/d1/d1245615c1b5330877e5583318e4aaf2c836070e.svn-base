@@ -1,0 +1,17 @@
+package com.iosmobileapp.ashford.pages;
+
+import org.openqa.selenium.By;
+
+import com.iosmobileapp.ashford.utilities.AshfordLocators;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+
+public class CalendarPage {
+
+	// Method to verify the "Calendar" Header from the three line menu bar page..
+	public static boolean isCalendarHeader_Exists() throws InterruptedException
+	{
+		By locator_CalendarHeader = AshfordLocators.CALENDAR_TODAY;
+		boolean elementfound = CommonMethods.isElementFound(locator_CalendarHeader);
+		return elementfound;
+	}
+}

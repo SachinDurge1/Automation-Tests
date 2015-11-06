@@ -1,0 +1,17 @@
+package com.iosmobileapp.ashford.pages;
+
+import org.openqa.selenium.By;
+
+import com.iosmobileapp.ashford.utilities.AshfordLocators;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+
+public class ForgotPasswordPage {
+
+    // Method to get the "Reset Password" Element from the Forgot password page..
+		public static boolean isResetPassword_Exists() throws InterruptedException
+		{
+			By locator_ResetPasswordIcon = AshfordLocators.FORGOTPASSWORD_RESETPASSWORD_ICON;
+			boolean elementfound = CommonMethods.isElementFound(locator_ResetPasswordIcon);
+			return elementfound;
+		}
+}

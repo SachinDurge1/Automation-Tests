@@ -1,0 +1,91 @@
+package com.iosmobileapp.ashford.utilities;
+
+import org.openqa.selenium.By;
+
+// Class for Driver methods in the test scripts for Re-usability..
+public final  class AshfordLocators
+{	
+	    //Constants assigned with the locator values for the 'Login' page elements..	
+	    public static final By LOGINPAGE_EMAILID = By.name("Username");
+	    public static final By LOGINPAGE_PASSWORD = By.name("Password");
+		public static final By LOGINPAGE_SIGNIN_BTN = By.name("Go");
+		public static final By LOGINPAGE_FORGOTPASSWORD_LINK = By.name("Forgot Password Button");
+		public static final By LOGINPAGE_HELPCENTER_ICON = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIAButton[1]");
+		
+		//Constants assigned with the locator values for the 'Help Center' page elements..
+		public static final By HELPCENTER_BACK_ICON = By.name("Back");
+		public static final By HELPCENTER_HELPCENTER_ICON = By.name("Help Center");
+		public static final By HELPCENTER_TALON_ICON = By.name("ico talon");
+		public static final By HELPCENTER_SUPPORTNUMBER_LINK = By.name("Support Number: (800) 285-9796");
+		public static final By HELPCENTER_FAQ_LINK = By.name("Frequently Asked Questions");
+		public static final By HELPCENTER_VIDEOTUTORIAL_LINK = By.name("Video Tutorial");
+		public static final By HELPCENTER_PRIVACYPOLICY_LINK = By.name("Privacy Policy");
+		
+		//Constants assigned with the locator values for the 'Forgot Password' page elements..
+		public static final By FORGOTPASSWORD_RESETPASSWORD_ICON = By.name("Reset Password");
+		
+		//Constants assigned with the locator values for the 'Home' page elements..
+		public static final By HOMEPAGE_HOME_ICON = By.name("Home");
+		//public static final By HOMEPAGE_THREELINEBAR = By.name("ico menu");
+		public static final By HOMEPAGE_THREELINEBAR_ICON = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIANavigationBar[1]/UIAButton[1]");
+		public static final By HOMEPAGE_CALENDER_ICON = By.name("ico calendar");
+		public static final By HOMEPAGE_WRITINGCENTER = By.name("writingcenter");
+		public static final By HOMEPAGE_ASHFORDLIBRARY = By.name("library");
+		public static final By HOMEPAGE_FACBOOK_ICON = By.name("Facebook");
+		public static final By HOMEPAGE_TWITTER_ICON = By.name("Twitter");
+		public static final By HOMEPAGE_YOUTUBE_ICON = By.name("Youtube");
+		public static final By HOMEPAGE_SIGNOUT_LINK = By.name("Sign Out");
+		public static final By HOMEPAGE_YES_POPUP = By.name("YES");
+		
+		//Constants assigned with the locator values for the 'Facebook' page elements..
+		public static final By FACEBOOK_BACKTOASHFORD = By.xpath("//UIAApplication[1]/UIAWindow[4]/UIAStatusBar[1]/UIAButton[1]");
+		
+		//Constants assigned with the locator values for the 'Calendar' page elements..
+		public static final By CALENDAR_TODAY = By.name("Today");
+		
+		//Constants assigned with the locator values for the 'ThreeLineIconBar' page elements..
+		public static final By THREELINEBAR_ASHFORDPROFILE_LINK = By.name("Ashford01's Profile");
+		public static final By THREELINEBAR_HOME_LINK = By.name("Home");
+		public static final By THREELINEBAR_CALENDER_LINK = By.name("Calendar");
+		public static final By THREELINEBAR_NEWSALERTS_LINK = By.name("News & Alerts");
+		public static final By THREELINEBAR_CONTACTS_LINK = By.name("Contacts");		
+		public static final By THREELINEBAR_PASTCOURSES_LINK = By.name("Past Courses");
+		public static final By THREELINEBAR_FUTURECOURSES_LINK = By.name("Future Courses");
+		public static final By THREELINEBAR_HELPCENTER_LINK = By.name("Help Center");
+		public static final By THREELINEBAR_SIGNOUT = By.name("Sign Out");	
+		
+		//Constants assigned with the locator values for the 'Student Profile' page elements..
+		public static final By STUDENTPROFILE_STUDENTPROFILE_HEADER = By.name("Student Profile");
+		public static final By STUDENTPROFILE_THREELINEBAR_ICON = By.name("ico menu");
+		public static final By STUDENTPROFILE_PROFILEID_PICTURE = By.name("profile ID picture");
+		//public static final By ASHFORDPROFILE_PROFILEID_PICTURE = By.xpath("//UIAApplication[1]/UIAWindow[2]/UIAButton[1]");
+		public static final By STUDENTPROFILE_MYFINANCES_LINK = By.name("My Finances");
+		public static final By STUDENTPROFILE_STUDENTIDCARD_LINK = By.name("Student ID Card");
+		public static final By STUDENTPROFILE_SETSIGNATURE_LINK = By.name("Set Signature");
+		
+		//Constants assigned with the locator values for the 'My Finances' page elements..
+		public static final By MYFINANCES_MYFINANCES_HEADER = By.name("My Finances");
+		public static final By MYFINANCES_BACK = By.name("Back");
+		public static final By MYFINANCES_ACCOUNTINFO_LINK = By.name("Account Info");
+		public static final By MYFINANCES_FASTATUS_LINK = By.name("FA Status");
+		
+		//Constants assigned with the locator values for the 'StudentID Card' page elements..
+		public static final By STUDENTIDCARD_PROFILEID_PICTURE = By.name("profile ID picture plain");
+		//public static final By StudentIDCard_profileIDpictureplain = By.name("//UIAApplication[1]/UIAWindow[2]/UIAButton[1]");
+		public static final By STUDENTIDCARD_CLOSE_ICON = By.name("close icon");
+		
+		//Constants assigned with the locator values for the 'Set Signature' page elements..
+		public static final By SIGNATURE_SIGNATURE_HEADER = By.name("Signature");
+		public static final By SIGNATURE_BACK_LINK = By.name("Back");
+		public static final By SIGNATURE_SAVE_BUTTON = By.name("Save");
+		public static final By SIGNATURE_SIGNATURENAME_FIELD = By.name("Signature Name");
+		public static final By SIGNATURE_SIGNATUREEMAIL_FIELD = By.name("Signature Email");
+		
+		
+		
+
+		
+
+		
+		
+}

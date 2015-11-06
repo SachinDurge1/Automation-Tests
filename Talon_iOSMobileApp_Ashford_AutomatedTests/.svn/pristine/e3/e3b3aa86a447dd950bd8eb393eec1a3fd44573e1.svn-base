@@ -1,0 +1,26 @@
+package com.iosmobileapp.ashford.utilities;
+
+
+//Class for Resources in the test scripts for Re-usability..
+public final class GetResourceFileLocations {
+
+	
+	public final static String commonPath = System.getProperty("user.dir");
+	
+	public static void sysout() {
+		// TODO Auto-generated method stub
+		
+		 String common = System.getProperty("user.dir");
+		 System.out.println("common ="+common);
+
+	}
+	// Constant for the common file location..
+	//public final static String commonPath = "/Users/Apple/Documents/TalonAutomation_Workspace/Talon_iOSMobileApp_Ashford_AutomatedTests/src/com/iosmobileapp/ashford/resources";
+
+	// Constant for file path of device set up file..
+	public final static String DEVICESETUP = commonPath + "/src/com/iosmobileapp/ashford/resources/DeviceSetUp.txt";
+
+	// Constant for file path of Credentials file..
+	public final static String CREDENTIALS = commonPath + "/src/com/iosmobileapp/ashford/resources/Credentials.txt";
+
+}

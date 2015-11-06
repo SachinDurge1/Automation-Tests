@@ -1,0 +1,57 @@
+package com.iosmobileapp.ashford.pages;
+
+import org.openqa.selenium.By;
+
+import com.iosmobileapp.ashford.utilities.AshfordLocators;
+import com.iosmobileapp.ashford.utilities.CommonMethods;
+
+public class AshfordProfilePage {
+
+	// Method to get the "Ashford Student Profile" Header from the Ashford Profile page..
+	public static boolean isAshfordStdentProfileHdr_Exists() throws InterruptedException
+	{
+		By locator_AshfordProfile = AshfordLocators.STUDENTPROFILE_STUDENTPROFILE_HEADER;
+		boolean elementfound = CommonMethods.isElementFound(locator_AshfordProfile);
+		return elementfound;
+	}
+	
+	// Method to get the "Three Line Menu Bar" Icon from the Ashford Profile page..
+	public static boolean isThreeLineMenuBar_Exists() throws InterruptedException
+	{
+		By locator_ThreeLineMenuBar = AshfordLocators.STUDENTPROFILE_THREELINEBAR_ICON;
+		boolean elementfound = CommonMethods.isElementFound(locator_ThreeLineMenuBar);
+		return elementfound;
+	}
+	
+	// Method to get the "Profile Id Picture" Icon from the Ashford Profile page..
+	public static boolean isProfileIdPicture_Exists() throws InterruptedException
+	{
+		By locator_ProfileIdPicture = AshfordLocators.STUDENTPROFILE_PROFILEID_PICTURE;
+		boolean elementfound = CommonMethods.isElementFound(locator_ProfileIdPicture);
+		return elementfound;
+	}
+	
+	// Method to get the "My Finances" Link from the Ashford Profile page..
+	public static boolean isMyFinancesLink_Exists() throws InterruptedException
+	{
+		By locator_MyFinances = AshfordLocators.STUDENTPROFILE_MYFINANCES_LINK;
+		boolean elementfound = CommonMethods.isElementFound(locator_MyFinances);
+		return elementfound;
+	}
+	
+	// Method to get the "Student ID Card" Link from the Ashford Profile page..
+	public static boolean isStudentIDCardLink_Exists() throws InterruptedException
+	{
+		By locator_StudentIDCard = AshfordLocators.STUDENTPROFILE_STUDENTIDCARD_LINK;
+		boolean elementfound = CommonMethods.isElementFound(locator_StudentIDCard);
+		return elementfound;
+	}
+	
+	// Method to get the "Set Signature" Link from the Ashford Profile page..
+	public static boolean isSetSignatureLink_Exists() throws InterruptedException
+	{
+		By locator_SetSignatureCard = AshfordLocators.STUDENTPROFILE_SETSIGNATURE_LINK;
+		boolean elementfound = CommonMethods.isElementFound(locator_SetSignatureCard);
+		return elementfound;
+	}
+}
